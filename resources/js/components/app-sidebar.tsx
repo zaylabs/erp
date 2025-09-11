@@ -5,15 +5,17 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, Sid
 import { dashboard } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import { BookOpen, Folder, LayoutGrid, Briefcase, Users2, Clock4, Wallet, BarChart2, FileCheck2 } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
-    {
-        title: 'Dashboard',
-        href: dashboard(),
-        icon: LayoutGrid,
-    },
+    { title: 'Dashboard', href: dashboard(), icon: LayoutGrid },
+    { title: 'HR', href: { url: '/hr', method: 'get' }, icon: Briefcase },
+    { title: 'Employees', href: { url: '/hr/employees', method: 'get' }, icon: Users2 },
+    { title: 'Attendance', href: { url: '/hr/attendance', method: 'get' }, icon: Clock4 },
+    { title: 'Payroll', href: { url: '/hr/payroll', method: 'get' }, icon: Wallet },
+    // KPIs deferred to later phase
+    { title: 'Recruitment', href: { url: '/hr/recruitment', method: 'get' }, icon: FileCheck2 },
 ];
 
 const footerNavItems: NavItem[] = [

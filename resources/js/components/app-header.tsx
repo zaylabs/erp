@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 import { dashboard } from '@/routes';
 import { type BreadcrumbItem, type NavItem, type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid, Menu, Search } from 'lucide-react';
+import { BookOpen, Folder, LayoutGrid, Menu, Search, Briefcase, Users2 } from 'lucide-react';
 import AppLogo from './app-logo';
 import AppLogoIcon from './app-logo-icon';
 
@@ -22,6 +22,8 @@ const mainNavItems: NavItem[] = [
         href: dashboard(),
         icon: LayoutGrid,
     },
+    { title: 'HR', href: { url: '/hr', method: 'get' }, icon: Briefcase },
+    { title: 'Employees', href: { url: '/hr/employees', method: 'get' }, icon: Users2 },
 ];
 
 const rightNavItems: NavItem[] = [
